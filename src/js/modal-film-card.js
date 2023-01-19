@@ -5,7 +5,7 @@ import createBtnWatched from './watched-create-btn';
 import createBtnQueue from './queue-create-btn';
 import { addLibraryListWatched } from './watched';
 import { addLibraryListQueue } from './queue';
-import foto from '../images/poster/poster-not-found-desk.jpg';
+import imageReplace from '../images/poster/poster-not-found-desk.jpg';
 
 const bodyScrollLock = require('body-scroll-lock');
 
@@ -107,18 +107,18 @@ export default class ModalMovie {
     if (document.querySelector('#watched-btn')) {
       if (
         document.querySelector('#watched-btn').classList[0] ===
-          'button--active' ||
+        'button--active' ||
         document.querySelector('#watched-btn').classList[1] ===
-          'button--active' ||
+        'button--active' ||
         document.querySelector('#watched-btn').classList[2] === 'button--active'
       ) {
         addLibraryListWatched();
       }
       if (
         document.querySelector('#queue-btn').classList[0] ===
-          'button--active' ||
+        'button--active' ||
         document.querySelector('#queue-btn').classList[1] ===
-          'button--active' ||
+        'button--active' ||
         document.querySelector('#queue-btn').classList[2] === 'button--active'
       ) {
         addLibraryListQueue();
@@ -144,7 +144,7 @@ export default class ModalMovie {
 
     let img = `${this.IMAGE_URL}${poster_path}`;
     if (!poster_path) {
-      img = foto;
+      img = imageReplace;
     }
 
     if (!overview.length) {
